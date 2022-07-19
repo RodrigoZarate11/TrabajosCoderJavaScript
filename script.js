@@ -10,12 +10,11 @@ do {
  */
 
 
-
-
-
 /*-----------------------------------------------------------------------------------*/
-/* var usuario = prompt("Ingrese usuario para registrarse")
-var constrasenia = prompt("Ingrese una contraseña para registrarse")
+/* Ejercio de validacion de usuario y contraseña, con 3 ingresos de contraseña incorrectos muestra cartel de generar una nueva*/
+
+let usuario = prompt("Ingrese usuario para registrarse")
+let constrasenia = prompt("Ingrese una contraseña para registrarse")
 let contador = 0
 
 
@@ -25,7 +24,7 @@ while(usuario!=usuarioComparacion){
     usuarioComparacion = prompt("Ingrese su usuario")
     }
 
-var contraseniaComparacion = prompt("Ingrese su contraseña para ingresar al sitio")
+let contraseniaComparacion = prompt("Ingrese su contraseña para ingresar al sitio")
 while(constrasenia!=contraseniaComparacion && contador<3){
     alert("contraseña incorrecta, intente nuevamente")
     contador = contador + 1 
@@ -36,18 +35,24 @@ if(contador==3){
     constrasenia= "contraseñaInhackeableHastaNuevoTramite"
     exit
 }
-console.log("Bienvenido, usted ha ingresado al sitio") */
+console.log("Bienvenido, usted ha ingresado al sitio")
 
 /*-----------------------------------------------------------------------------------*/
 /*El factorial de un numero entero en matematicas es el producto de todos los números enteros positivos desde 1 hasta n
 Por ejemplo: 5! = 1  x  2  x  3  x  4 x  5= 120.*/
 
-let factorial = parseInt(prompt("Ingrese un numero entero a calcular su factorial"))
-let resultado = 1
+/* function calcularFactorial(){
 
-for (let i = 1; i <= factorial; i++) {
-    resultado = i * resultado
- 
+    let factorial = parseInt(prompt("Ingrese un numero entero a calcular su factorial"))
+    let resultado = 1
+    for (let i = 1; i <= factorial; i++) {
+        resultado = i * resultado
+    
+    }
+    console.log("La factorial de",factorial ,"es: ",resultado)
 }
-console.log("La factorial de",factorial ,"es: ",resultado)
+
+calcularFactorial() */
+
+
 
