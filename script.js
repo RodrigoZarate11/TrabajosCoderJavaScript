@@ -1,58 +1,51 @@
-/* ----------------------------------------------------------------------------------- */
-/* Imprime numeros del 1 al 100 en pantalla */
 
-/* let num = 1
+/*REMATE DE AUTOS*/
 
-do {
-    console.log(num)
-    num = num + 1
-} while (num<=100);
- */
-
-
-/*-----------------------------------------------------------------------------------*/
-/* Ejercio de validacion de usuario y contraseña, con 3 ingresos de contraseña incorrectos muestra cartel de generar una nueva*/
-
-let usuario = prompt("Ingrese usuario para registrarse")
-let constrasenia = prompt("Ingrese una contraseña para registrarse")
-let contador = 0
-
-
-var usuarioComparacion = prompt("Ingrese su usuario para ingresar al sitio")
-while(usuario!=usuarioComparacion){
-    alert("Usuario incorrecto, intente nuevamente")
-    usuarioComparacion = prompt("Ingrese su usuario")
-    }
-
-let contraseniaComparacion = prompt("Ingrese su contraseña para ingresar al sitio")
-while(constrasenia!=contraseniaComparacion && contador<3){
-    alert("contraseña incorrecta, intente nuevamente")
-    contador = contador + 1 
-    usuarioComparacion = prompt("Ingrese su contraseña")
-    }
-if(contador==3){
-    console.log("Usted ha ingresado erroneamente " ,contador ,"veces la contraseña, debe generarla nuevamente. Gracias")
-    constrasenia= "contraseñaInhackeableHastaNuevoTramite"
-    exit
-}
-console.log("Bienvenido, usted ha ingresado al sitio")
-
-/*-----------------------------------------------------------------------------------*/
-/*El factorial de un numero entero en matematicas es el producto de todos los números enteros positivos desde 1 hasta n
-Por ejemplo: 5! = 1  x  2  x  3  x  4 x  5= 120.*/
-
-/* function calcularFactorial(){
-
-    let factorial = parseInt(prompt("Ingrese un numero entero a calcular su factorial"))
-    let resultado = 1
-    for (let i = 1; i <= factorial; i++) {
-        resultado = i * resultado
+let autos = [
     
-    }
-    console.log("La factorial de",factorial ,"es: ",resultado)
+        { id: 1, nombre: 'Ferrari', modelo: '2020', precio: 100000},
+        { id: 2, nombre: 'Lamborghini', modelo: '2021', precio: 75000},
+        { id: 3, nombre: 'Audi', modelo: '2019',precio: 80000},
+        { id: 4, nombre: 'Ford', modelo: '2019',precio: 50000},
+        { id: 5, nombre: 'Toyota', modelo: '2005',precio: 2500},
+        { id: 6, nombre: 'Nissan', modelo: '2012',precio: 5500},
+    
+]
+
+
+
+
+idElegido = parseInt(prompt("elija id de auto para asignar precio de subasta")) 
+
+
+if (idElegido >0 && idElegido<autos.length+1) {
+    console.log("el auto seleccionado es id "+autos[idElegido-1].id,"marca ",autos[idElegido-1].nombre,"modelo ",autos[idElegido-1].modelo,"precio $",autos[idElegido-1].precio)
+    let personaOfertante = autos.slice((idElegido-1),idElegido)
+    precioAsignado = parseInt(prompt("Por favor indique el precio a ofertar")) 
+        if(precioAsignado>autos[idElegido-1].precio){
+            personaOfertante[0].precio = precioAsignado
+            console.log("USTED ESTA SELECCIONADO PARA PARTICIPAR EN LA SUBASTA")
+            console.log(personaOfertante)}
+        else {
+            console.log("El precio asignado no supera el precio base, lo esperamos para la proxima subasta, Muchas gracias")
+        }
+
+
 }
 
-calcularFactorial() */
 
 
+/* 
+switch (opcion) {
+    case value: '1'
+        
+        break; 
+    case value: '2'
+        
+        break;     
 
+    default:
+        break;
+}
+
+let autoBusqueda = prompt("ingrese auto a buscar") */
