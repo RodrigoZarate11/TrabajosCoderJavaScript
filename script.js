@@ -32,20 +32,3 @@ if (idElegido >0 && idElegido<autos.length+1) {
 
 
 }
-
-
-
-/* 
-switch (opcion) {
-    case value: '1'
-        
-        break; 
-    case value: '2'
-        
-        break;     
-
-    default:
-        break;
-}
-
-let autoBusqueda = prompt("ingrese auto a buscar") */
